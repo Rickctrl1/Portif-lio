@@ -4,129 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simples</title>
-    
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape)">
+
+
     <script src="https://kit.fontawesome.com/97fd1de8c7.js" crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&    family=Crete+Round:ital@0;1&display=swap');
 
-        *{
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box; 
-        }
-        
-        
-        body{
-            background-color: rgb(200, 199, 186);
-            height: 100vh;
-            width: 100vw;
-            overflow: hidden; 
-            
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
-            padding: 20px; /* Reduzi o padding já que o container vai ser menor */
-
-            
-        }
-
-        .container{
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(12, minmax(0, 1fr)); 
-            
-            width: 100%;
-            height: 100%; 
-            
-            /* --- AQUI ESTÁ A SOLUÇÃO DO TAMANHO --- */
-            max-width: 1000px;  /* Antes era 1100px. Controle a largura aqui */
-            max-height: 450px; /* Antes era 800px. Controle a altura aqui */
-            overflow: hidden; 
-        }
-
-        .caixa1{
-            background-color: rgb(31, 32, 32);
-            grid-area: 1/1/8/8;
-        }
-
-        .caixa2{
-            background-color: rgb(200, 199, 186);
-            grid-area: 1/8/6/13;
-        }
-
-        .caixa3{
-            border: 1px solid red;
-            background-color: rgb(200, 199, 186);
-            grid-area: 8/1/13/6;
-        }
-
-        .caixa4{
-            background-color: rgb(224, 225, 225);
-            grid-area: 6/6/13/13;
-        }
-        
-        .infos{
-            color: white;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(12, 1fr);
-            height: 100%;
-        }
-
-        .nome{
-            grid-area: 2/2/3/6;
-            display: flex;
-            align-items: flex-end;
-            font-size: 14px;
-            
-            
-        }
-        
-        .slogan {
-            grid-area: 3/2/9/6;
-            /* Troquei vw por clamp para o texto não ficar nem gigante, nem minúsculo */
-            font-size: clamp(30px, 4vw, 55px); 
-            font-family: "Abril Fatface";
-            font-size: 3em;
-            display: flex;
-            align-items: center; 
-        }
-
-        
-
-        .sobre{
-            grid-area: 10/2/12/4;
-        }
-
-        .contato{
-            grid-area: 10/4/12/7;
-            padding-left: 10px;
-        }
-
-        .social{
-            grid-area: 11/7/12/10;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 10px;
-        }
-
-        div.social a{
-            color: white;
-            font-size: 15px;            
-        }
-
-        .sobre h1, .contato h1{
-            font-size: 14px;
-            padding-bottom: 5px;
-        }
-
-        .contato p, .sobre p{
-            font-size: 10px;
-            font-family: 'Abril Fatface';
-        }
-        
-    </style>
 </head>
 <body>
     <div class="container">
