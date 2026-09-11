@@ -1,1 +1,45 @@
 /* Aparelho em pé (portrait) */
+
+/* Ocultar as caixas extras */
+.caixa2, .caixa3, .caixa4 {
+    display: none;
+}
+
+/* 2. Remover a restrição de altura do container para preencher a tela mobile */
+.container {
+    max-height: 100vh;
+    
+}
+
+/* 3. Expandir a caixa 1 para ocupar todo o grid de 12x12 do container */
+.caixa1 {
+    grid-area: 1 / 1 / 13 / 13;
+}
+
+/* 4. Reorganizar o grid interno (.infos) para empilhar os itens verticalmente */
+.nome {
+    
+    grid-area: 2 / 2 / 3 / 5;
+}
+
+.slogan {
+    grid-area: 3 / 2 / 6 / 12;
+    font-size: clamp(35px, 12vw, 55px); /* Aumenta o peso no mobile */
+}
+
+.sobre {
+    
+    grid-area: 11 / 2 / 12 / 5; /* Ocupa a largura quase toda */
+}
+
+.contato {
+    
+    grid-area: 11 / 5 / 12 / 9; /* Vai para baixo do 'sobre' */
+    padding-left: 0px; 
+}
+
+.social {
+    
+    grid-area: 11 / 9 / 12 / 12;
+    justify-content: flex-start; /* Alinha os ícones à esquerda acompanhando o texto */
+}
