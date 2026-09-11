@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Typical Device Breakpoints 
+---------------------------------
+Pequenas telas: até 600px
+Celular: de 600px - 768px
+Tablet: 768px - 992px
+Desktop: 992px - 1200px
+Grandes telas: acima de 1200px
+*/
+
+
+
+@media screen and (max-width: 800px) { /*Pequena*/
+    .caixa2, .caixa3, .caixa4 {
+    display: none;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+/* 2. Remover a restrição de altura do container para preencher a tela mobile */
+.container {
+    max-height: 100vh;
+    
+}
+
+/* 3. Expandir a caixa 1 para ocupar todo o grid de 12x12 do container */
+.caixa1 {
+    grid-area: 1 / 1 / 13 / 13;
+}
+
+/* 4. Reorganizar o grid interno (.infos) para empilhar os itens verticalmente */
+.nome {
+    
+    grid-area: 2 / 2 / 3 / 5;
+}
+
+.slogan {
+    grid-area: 3 / 2 / 6 / 12;
+    font-size: clamp(35px, 12vw, 55px); /* Aumenta o peso no mobile */
+}
+
+.sobre {
+    
+    grid-area: 11 / 2 / 12 / 5; /* Ocupa a largura quase toda */
+}
+
+.contato {
+    
+    grid-area: 11 / 5 / 12 / 9; /* Vai para baixo do 'sobre' */
+    padding-left: 0px; 
+}
+
+.social {
+    
+    grid-area: 11 / 9 / 12 / 12;
+    justify-content: flex-start; /* Alinha os ícones à esquerda acompanhando o texto */
+}
+}
