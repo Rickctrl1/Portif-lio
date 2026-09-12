@@ -21,7 +21,7 @@ body{
     
 }
 
-.container1{
+.container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, minmax(0, 1fr)); 
@@ -105,9 +105,43 @@ body{
 .caixa4{
     background-color: rgb(224, 225, 225);
     grid-area: 6/6/13/13;
+    
 }
 
+.projetos{
+    background-color: rgb(105, 42, 42);
 
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 100%; /*faz ocupar toda a area*/
+    
+}
+
+.item1{
+    background-color: aliceblue;
+    grid-area: 1/1/9/4;
+}
+
+.item2{
+    background-color: antiquewhite;
+    grid-area: 1/4/9/7;
+}
+
+.item3{
+    background-color: rgb(38, 95, 95);
+    grid-area: 9/1/13/7;
+}
+
+.item4{
+    background-color: rgb(176, 95, 38);
+    grid-area: 1/7/6/13;
+}
+
+.item5{
+    background-color: rgb(40, 40, 111);
+    grid-area: 6/7/13/13;
+}
 /*fim caixa4*/
 
 
