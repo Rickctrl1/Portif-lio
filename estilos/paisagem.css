@@ -21,7 +21,7 @@ body{
     
 }
 
-.container{
+.container1{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, minmax(0, 1fr)); 
@@ -35,25 +35,10 @@ body{
     overflow: hidden; 
 }
 
+/*inicio caixa1*/
 .caixa1{
     background-color: rgb(31, 32, 32);
     grid-area: 1/1/8/8;
-}
-
-.caixa2{
-    background-color: rgb(200, 199, 186);
-    grid-area: 1/8/6/13;
-}
-
-.caixa3{
-    
-    background-color: rgb(200, 199, 186);
-    grid-area: 8/1/13/6;
-}
-
-.caixa4{
-    background-color: rgb(224, 225, 225);
-    grid-area: 6/6/13/13;
 }
 
 .infos{
@@ -70,7 +55,6 @@ body{
     align-items: flex-end;
     font-size: 14px;
     
-    
 }
 
 .slogan {
@@ -82,8 +66,6 @@ body{
     display: flex;
     align-items: center; 
 }
-
-
 
 .sobre{
     grid-area: 10/2/12/4;
@@ -102,7 +84,7 @@ body{
     gap: 10px;
 }
 
-div.social a{
+.social a{
     color: white;
     font-size: 15px;            
 }
@@ -116,3 +98,28 @@ div.social a{
     font-size: 10px;
     font-family: 'Abril Fatface';
 }
+/*fim caixa1*/
+
+/*inicio caixa4*/
+
+.caixa4{
+    background-color: rgb(224, 225, 225);
+    grid-area: 6/6/13/13;
+}
+
+
+/*fim caixa4*/
+
+
+.caixa2{
+    background-color: rgb(200, 199, 186);
+    grid-area: 1/8/6/13;
+}
+
+.caixa3{
+    
+    background-color: rgb(200, 199, 186);
+    grid-area: 8/1/13/6;
+}
+
+
