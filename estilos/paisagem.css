@@ -100,47 +100,104 @@ body{
 }
 /*fim caixa1*/
 
-/*inicio caixa4*/
+/*inicio caixa4 (accordion)*/
 
-.caixa4{
+.caixa4 {
     background-color: rgb(224, 225, 225);
     grid-area: 6/6/13/13;
-    
+    /* Adicionado flex para o acordeão preencher 100% da caixa */
+    display: flex;
+    overflow: hidden;
 }
 
-.projetos{
-    background-color: rgb(105, 42, 42);
-
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    height: 100%; /*faz ocupar toda a area*/
-    
+.caixa4 .accordion {
+    width: 100%;
+    height: 100%;
 }
 
-.item1{
-    background-color: aliceblue;
-    grid-area: 1/1/9/4;
+.caixa4 .accordion ul {
+    width: 100%;
+    height: 100%;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
 }
 
-.item2{
-    background-color: antiquewhite;
-    grid-area: 1/4/9/7;
+.caixa4 .accordion li {
+    width: 33.333%; /* Divide igualmente as 3 abas inicialmente */
+    height: 100%;
+    display: table-cell;
+    vertical-align: bottom;
+    position: relative;
+    transition: all 900ms ease;
 }
 
-.item3{
-    background-color: rgb(38, 95, 95);
-    grid-area: 9/1/13/7;
+/* Cores aplicadas aos itens */
+.caixa4 .accordion li:nth-child(1) { background-color: rgb(113, 40, 40); }
+.caixa4 .accordion li:nth-child(2) { background-color: rgb(46, 46, 133); }
+.caixa4 .accordion li:nth-child(3) { background-color: rgb(119, 35, 119); }
+
+.caixa4 .accordion li div {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
-.item4{
-    background-color: rgb(176, 95, 38);
-    grid-area: 1/7/6/13;
+.caixa4 .accordion li div a {
+    /* Mudança para Flexbox para alinhar o texto sempre na base, independente da altura da caixa */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    z-index: 3;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 200ms ease;
 }
 
-.item5{
-    background-color: rgb(40, 40, 111);
-    grid-area: 6/7/13/13;
+.caixa4 .accordion li div a * {
+    width: 100%;
+    margin: 0;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 5;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateX(-20px);
+    transition: all 400ms ease;
+    opacity: 0;
+}
+
+.caixa4 .accordion li div a h2 {
+    font-family: 'Times New Roman', Times, serif;
+    text-overflow: clip;
+    font-size: 20px; /* Reduzido levemente para caber bem no grid */
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.caixa4 .accordion li div a p {
+    font-size: 13.5px;
+}
+
+/* Efeitos de Hover */
+.caixa4 .accordion ul:hover li {
+    width: 10%;
+}
+
+.caixa4 .accordion ul:hover li:hover {
+    width: 80%;
+}
+
+.caixa4 .accordion ul:hover li:hover a * {
+    opacity: 1;
+    transform: translateX(0);
 }
 /*fim caixa4*/
 
